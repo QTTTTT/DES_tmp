@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DES</title>
+</head>
+<style type="text/css">
+	.oneThird{
+		width: 30%;
+		display: inline-block;
+		float: left;
+	}
+</style>
+<body>
+	<br>
+	<h1 style="text-align: center;">My name:QuTong</h1>
+	<input type="file"  id = "fileId" /> <br><br>
+	<input type="button" value="读取密钥" onclick="freadAsBinaryString()"  /> 
+	<input type="" id="key">
+	<div width=100%>
+	<div class="oneThird">
+	<p>加密前图像</p>
+	<img style="width: 400px" src="" id="img"/>
+	</div>
+	
+	<div class="oneThird">
+		<input type="button" value="ECB加密" onclick="encode_ECB(1)"  /> 
+		<p >ECB加密后图像</p>
+	<img style="width: 400px" src="ecb加密后的1.bmp" id="deent_img" hidden="true"/>
+		<input type="button" value="ECB解密" onclick="decode_ECB(1)" hidden="true" id="deent_button"/> 
+	<img style="width: 400px" id="deent" hidden="true" />
+	
+	</div>
+	
+	<div class="oneThird">
+		<input type="button" value="CBC加密" onclick="encode_ECB(0)"  /> 
+		<p>CBC加密后图像</p>
+	<img style="width: 400px" src="cbc加密后的1.bmp" id="decbt_img" hidden="true"/>
+		<input type="button" value="CBC解密" onclick="decode_ECB(0)" hidden="true" id="decbt_button"/> 
+	<img style="width: 400px" id="decbt" hidden="true" >
+
+	</div>
+	</div>
+	<div id="qwer"></div>
+</body>
+	<script type="text/javascript" src="des.js"></script>
+
+</html>
